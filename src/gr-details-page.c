@@ -32,6 +32,7 @@
 #include "gr-utils.h"
 #include "gr-ingredients-list.h"
 #include "gr-timer.h"
+#include "gr-recipe-printer.h"
 
 
 typedef struct
@@ -250,6 +251,17 @@ more_recipes (GrDetailsPage *page)
         gr_window_show_chef (GR_WINDOW (window), page->chef);
 
         return TRUE;
+}
+
+static void
+print_recipe (GrDetailsPage *page)
+{
+        GtkWidget *window;
+        GrRecipePrinter *printer = NULL;
+
+        window = gtk_widget_get_ancestor (GTK_WIDGET (page), GTK_TYPE_APPLICATION_WINDOW);
+        printer = gr_recipe_printer_new (GTK_WINDOW (window));
+        gr_recipe_printer_print (printer, page->recipe);
 }
 
 static void
@@ -496,6 +508,7 @@ gr_details_page_class_init (GrDetailsPageClass *klass)
         gtk_widget_class_bind_template_callback (widget_class, edit_recipe);
         gtk_widget_class_bind_template_callback (widget_class, delete_recipe);
         gtk_widget_class_bind_template_callback (widget_class, more_recipes);
+        gtk_widget_class_bind_template_callback (widget_class, print_recipe);
         gtk_widget_class_bind_template_callback (widget_class, serves_value_changed);
         gtk_widget_class_bind_template_callback (widget_class, start_or_stop_timer);
         gtk_widget_class_bind_template_callback (widget_class, time_spin_input);
