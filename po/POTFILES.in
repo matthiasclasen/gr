@@ -8,7 +8,7 @@ src/gr-cuisine-page.ui
 src/gr-cuisines-page.ui
 src/gr-details-page.ui
 src/gr-edit-page.ui
-src/gr-images.ui
+src/gr-image-editor.ui
 src/gr-ingredient-search-tile.ui
 src/gr-ingredient-tile.ui
 src/gr-ingredients-page.ui
