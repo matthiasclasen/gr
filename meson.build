@@ -1,6 +1,8 @@
 project('recipes', 'c', version: '0.1.0',
         meson_version : '>=0.36.0')
 
+i18n = import('i18n')
+
 conf = configuration_data()
 
 conf.set_quoted('G_LOG_DOMAIN', 'org.gnome.Recipes')
@@ -21,9 +23,8 @@ top_inc = include_directories('.')
 
 libgd_tagged_entry = true
 libgd_static = true
-subdir('data')
+subdir('po')
 subdir('libgd')
-subdir('libglnx')
 
 deps = [ dependency('gtk+-3.0'),
          dependency('gnome-autoar-0'),
