@@ -21,9 +21,12 @@ top_inc = include_directories('.')
 
 libgd_tagged_entry = true
 libgd_static = true
+subdir('data')
 subdir('libgd')
+subdir('libglnx')
 
 deps = [ dependency('gtk+-3.0'),
+         dependency('gnome-autoar-0'),
          libgd_dep ]
 
 subdir('src')
