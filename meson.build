@@ -94,6 +94,10 @@ subdir('tools')
 subdir('data')
 subdir('po')
 subdir('po-data')
-subdir('tests')
+#subdir('tests')
 
-meson.add_install_script('tools/meson_post_install.py')
+# meson.add_install_script('tools/meson_post_install.py')
+
+install_data('data/icons/512x512/org.gnome.Recipes.icns', install_dir : 'Contents/Resources')
+install_data('Info.plist', install_dir : 'Contents')
+install_data('gnome-recipes.sh', install_dir: 'Contents/MacOS')

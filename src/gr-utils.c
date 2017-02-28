@@ -146,6 +146,9 @@ get_old_user_data_dir (void)
 const char *
 get_pkg_data_dir (void)
 {
+	if (g_getenv ("RESOURCEDIR"))
+		return g_getenv ("RESOURCEDIR");
+
         return PKGDATADIR;
 }
 
