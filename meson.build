@@ -96,8 +96,12 @@ subdir('po')
 subdir('po-data')
 #subdir('tests')
 
-# meson.add_install_script('tools/meson_post_install.py')
+if host_machine.system() == 'darwin'
+  install_data('data/icons/512x512/org.gnome.Recipes.icns', install_dir : 'Contents/Resources')
+  install_data('Info.plist', install_dir : 'Contents')
+  install_data('gnome-recipes.sh', install_dir: 'Contents/MacOS')
 
-install_data('data/icons/512x512/org.gnome.Recipes.icns', install_dir : 'Contents/Resources')
-install_data('Info.plist', install_dir : 'Contents')
-install_data('gnome-recipes.sh', install_dir: 'Contents/MacOS')
+  meson.set_install_script('osx_bundler.sh')
+else
+  meson.add_install_script('tools/meson_post_install.py')
+endif
