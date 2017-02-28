@@ -1,13 +1,13 @@
 <?xml version="1.0"?> <!--*- mode: xml -*-->
 <app-bundle>
   <meta>
-    <prefix>/Users/mclasen/gtk/inst</prefix>
+    <prefix>${env:PREFIX}</prefix>
     <run-install-name-tool/>
     <gtk>gtk+-3.0</gtk>
-    <launcher-script>${project}/osx/gnome-recipes.sh</launcher-script>
+    <launcher-script>${project}/gnome-recipes.sh</launcher-script>
   </meta>
 
-  <plist>${project}/osx/Info.plist</plist>
+  <plist>${project}/Info.plist</plist>
 
   <main-binary>${prefix}/bin/gnome-recipes</main-binary>
 
@@ -40,7 +40,7 @@
   </data>
 
   <data dest="${bundle}/Contents/Resources">
-    ${project}/osx/org.gnome.Recipes.icns
+    ${project}/org.gnome.Recipes.icns
   </data>
 
   <!-- icon-theme icons="auto">
