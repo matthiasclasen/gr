@@ -1406,6 +1406,12 @@ next_step (GrEditPage *page)
 }
 
 static void
+instructions_changed (GrEditPage *page)
+{
+        g_print ("instructions were changed\n");
+}
+
+static void
 gr_edit_page_class_init (GrEditPageClass *klass)
 {
         GObjectClass *object_class = G_OBJECT_CLASS (klass);
@@ -1510,6 +1516,7 @@ gr_edit_page_class_init (GrEditPageClass *klass)
         gtk_widget_class_bind_template_callback (widget_class, preview_visible_changed);
         gtk_widget_class_bind_template_callback (widget_class, prev_step);
         gtk_widget_class_bind_template_callback (widget_class, next_step);
+        gtk_widget_class_bind_template_callback (widget_class, instructions_changed);
 }
 
 GtkWidget *

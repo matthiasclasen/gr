@@ -690,6 +690,7 @@
                     <property name="min-content-height">300</property>
                     <child>
                       <object class="GtkTextView" id="instructions_field">
+                        <property name="buffer">instructions_buffer</property>
                         <property name="visible">1</property>
                         <property name="wrap-mode">word</property>
                         <property name="top-margin">10</property>
@@ -1217,5 +1218,8 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkTextBuffer" id="instructions_buffer">
+    <signal name="changed" handler="instructions_changed" swapped="yes"/>
   </object>
 </interface>
