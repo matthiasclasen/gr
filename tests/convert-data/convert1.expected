@@ -1,3 +1,108 @@
-INPUT '20 tsp'
-RESULT '6.66667 tbsp'
+INPUT '1 g'
+RESULT '1 g'
+
+INPUT '10 g'
+RESULT '10 g'
+
+INPUT '100 g'
+RESULT '100 g'
+
+INPUT '1000 g'
+RESULT '1 kg'
+
+INPUT '10000 g'
+RESULT '10 kg'
+
+INPUT '0.001 kg'
+RESULT '1 g'
+
+INPUT '0.01 kg'
+RESULT '10 g'
+
+INPUT '0.1 kg'
+RESULT '100 g'
+
+INPUT '1 kg'
+RESULT '1 kg'
+
+INPUT '10 kg'
+RESULT '10 kg'
+
+INPUT '100 kg'
+RESULT '100 kg'
+
+INPUT '1000 kg'
+RESULT '1000 kg'
+
+INPUT '0.1 lb'
+RESULT '0.1 lb'
+
+INPUT '1 lb'
+RESULT '1 lb'
+
+INPUT '2 lb'
+RESULT '2 lb'
+
+INPUT '3 lb'
+RESULT '3 lb'
+
+INPUT '0.1 oz'
+RESULT '0.1 oz'
+
+INPUT '1 oz'
+RESULT '1 oz'
+
+INPUT '10 oz'
+RESULT '10 oz'
+
+INPUT '100 oz'
+RESULT '6.25 lb'
+
+INPUT '1 ml'
+RESULT '1 ml'
+
+INPUT '10 ml'
+RESULT '10 ml'
+
+INPUT '100 ml'
+RESULT '1 dl'
+
+INPUT '1000 ml'
+RESULT '1 l'
+
+INPUT '10000 ml'
+RESULT '10 l'
+
+INPUT '0.001 dl'
+RESULT '0.1 ml'
+
+INPUT '0.01 dl'
+RESULT '1 ml'
+
+INPUT '0.1 dl'
+RESULT '10 ml'
+
+INPUT '1 dl'
+RESULT '1 dl'
+
+INPUT '10 dl'
+RESULT '1 l'
+
+INPUT '100 dl'
+RESULT '10 l'
+
+INPUT '0.001 l'
+RESULT '1 ml'
+
+INPUT '0.01 l'
+RESULT '10 ml'
+
+INPUT '0.1 l'
+RESULT '1 dl'
+
+INPUT '1 l'
+RESULT '1 l'
+
+INPUT '10 l'
+RESULT '10 l'
 
